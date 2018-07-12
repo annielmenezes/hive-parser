@@ -81,8 +81,8 @@ app.get("/episodes", (req, res) => {
         );
       })
       .catch(err => {
-        res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({
-          error: HttpStatus.getStatusText(HttpStatus.INTERNAL_SERVER_ERROR)
+        res.status(HttpStatus.BAD_GATEWAY).send({
+          error: HttpStatus.getStatusText(HttpStatus.BAD_GATEWAY)
         });
       });
   }
