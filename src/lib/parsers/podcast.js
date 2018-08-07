@@ -1,5 +1,3 @@
-const { extractHostname } = require("../helpers/extract-domains");
-
 module.exports = ({
   description,
   link,
@@ -15,8 +13,6 @@ module.exports = ({
       : [rest["itunes:category"]["$"].text])
   );
 
-  console.log(extractHostname(link));
-
   return {
     title,
     link,
@@ -24,7 +20,6 @@ module.exports = ({
     lastBuildDate,
     author: rest["itunes:author"],
     image,
-    episodes_url: extractHostname(link),
     categories
   };
 };

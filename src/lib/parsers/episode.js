@@ -7,6 +7,7 @@ module.exports = ({
   ...rest
 }) => {
   const image = Object.assign({}, rest["itunes:image"]);
+
   return {
     title,
     link,

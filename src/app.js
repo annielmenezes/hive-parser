@@ -49,8 +49,6 @@ app.get("/episodes", (req, res) => {
       });
     })
     .catch(err => {
-      console.log(err.message);
-
       res.status(HttpStatus.BAD_GATEWAY).send({
         error: HttpStatus.getStatusText(HttpStatus.BAD_GATEWAY)
       });
